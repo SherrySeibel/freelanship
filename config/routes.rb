@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resource :employer_options, only: [:show]
   end
 
-  root to: "sessions#new", via: :get
+  root to: "homes#show", via: :get
 end
