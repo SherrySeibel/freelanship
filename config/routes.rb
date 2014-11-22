@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     resources :users, only: [:show]
   end
 
+  resources :listings, only: [:new]
+
   root to: "sessions#new", via: :get
 end
