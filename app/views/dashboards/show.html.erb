@@ -1,0 +1,5 @@
+<h1>What do you want to learn?</h1>
+
+<% if current_user.try(:employer) %>
+  <%= link_to "Create a listing", employer_options_path %>
+<% end %>
