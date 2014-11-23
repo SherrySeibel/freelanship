@@ -9,7 +9,6 @@
       <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>Freelanship</title>
         <meta name="generator" content="Bootply" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,37 +19,30 @@
         <!-- bootstrap- java script tools -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
       </head>
-  <body>
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <%= link_to "Freelanship", root_path, class: "navbar-brand" %>
-        </div>
+      <body>
+        <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <%= image_tag "logo_rsz.png", class: "navbar-brand" %>
+              <% link_to root_path, class: "navbar-brand" %>
+            </div>
 
-        <ul class="nav navbar-nav navbar-right">
-          <% if signed_in? %>
-            <li><%= link_to "Sign out", session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "Sign Up", new_user_path %></li>
-            <li><%= link_to "Sign In", new_session_path %></li>
-          <% end %>
-        </ul>
-      </div>
-      </div>
-    </nav>
+            <ul class="nav navbar-nav navbar-right">
+              <% if signed_in? %>
+                <li><%= link_to "Sign out", session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign Up", new_user_path %></li>
+                <li><%= link_to "Sign In", new_session_path %></li>
+              <% end %>
+            </ul>
+          </div>
+        </nav>
 
-    <% if alert %>
-      <p><%= alert %></p>
-    <% end %>
+      <% if alert %>
+        <p><%= alert %></p>
+      <% end %>
 
     <%= yield %>
 
   </body>
-    </html>
+</html>

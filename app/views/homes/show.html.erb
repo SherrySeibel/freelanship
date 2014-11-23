@@ -3,11 +3,11 @@
     <div class="row">
       <div class="col-lg-12 text-center v-center">
         <p><%= image_tag "logo_rsz.png", class: "lead" %></p>
-        <br><br><br>
+        <br/><br/><br/>
         <form class="col-lg-12">
           <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
             <input class="form-control input-lg" title="Enter desired skills you want to learn" placeholder="Start looking for an internship" type="text">
-            <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">Go!</button></span>
+            <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button"><%= link_to "Go!", new_session_path %></button></span>
           </div>
         </form>
       </div>
@@ -55,9 +55,9 @@
 
     <div class="row">
       <div class="col-lg-12">
-        <br><br>
+        <br/><br/>
         <p class="pull-right">© Freelanship</p>
-        <br><br>
+        <br/><br/>
       </div>
     </div>
   </div>
