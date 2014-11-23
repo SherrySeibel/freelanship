@@ -11,6 +11,9 @@ gem "jbuilder", "~> 2.0"
 gem "monban"
 gem "monban-generators"
 
+gem "sunspot_rails"
+gem "sunspot_solr"
+
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
