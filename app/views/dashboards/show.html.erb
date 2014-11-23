@@ -1,8 +1,16 @@
 <% if current_user.try(:employer) %>
   <%= link_to "Create a listing", employer_options_path %>
 <% end %>
+<style>
+h3 {
+  color: black;
+}
 
-<div class="container-full">
+div.panel-body {
+  color: black;
+}
+</style>
+<div class="container-full" style="background-image: url(assets/images/clouds.jpg);">
   <div class="row">
     <div class="col-lg-12 text-center v-center">
       <h1>Results</h1>
@@ -16,7 +24,7 @@
         <div class="row">
 
           <div class="col-md-3 col-xs-3 text-center">
-            <h3>Company</h3>
+            <h3 style="color:black;">Company</h3>
           </div>
 
           <div class="col-md-3 col-xs-3 text-center">
@@ -42,7 +50,7 @@
 
               <div class="col-md-3 col-xs-3 text-center">
                 <span class="company logo">
-                  <img alt src="css/content/vol_logo.png" style="width:60px;height:60px">
+                  <img alt src="assets/images/BostonGlobe.png" style="width:150px;height:60px">
                 </span>
               </div>
 
@@ -50,7 +58,7 @@
                 <span class="company name">
                   <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
-                      Volkswagen
+                      Seeking Journalist with Marketing Mindset
                     </a>
                   </h4>
 
@@ -59,13 +67,21 @@
 
               <div class="col-md-3 col-xs-3 text-center">
                 <span class="job skills">
-                  <h4>learning learning learning</h4>
+                  <h6>
+                    <span class="label label-primary">Writing Skills</span>
+                    <br/>
+                    <span class="label label-success"> Research</span>
+                    <br/>
+                    <span class="label label-info">PR/Outreach</span>
+                  </h6>
                 </span>
               </div>
 
               <div class="col-md-3 col-xs-3 text-center">
                 <span class="rating">
-                  <h4 text>95%</h4>
+                  <h4 text>
+                    <span class="badge">94%</span>
+                  </h4>
                 </span>
               </div>
             </div>
@@ -73,27 +89,13 @@
 
           <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              <a>apply</a>
+              Our client located in Downtown Boston is looking for a smart and driven journalist with a marketing mindset who wants to learn and earn at the same time. The ideal person has college journalism experience, and he or she is excited to learn more about content marketing. This is the perfect project for a smart and reliable experience seeker who is not only motivated to add vibrant pieces to their portfolio but who also wants to gain a load of transferrable soft skills. $400 for 4 weeks.
+              <span="label label-success"><%= link_to "Apply", class: "btn btn-success" %></span>
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
       </div>
     </div>
-
-
-
-
-
-
-
     <div class="panel panel-default">
       <div class="panel-heading" row="tab" id="headingTwo">
 
@@ -102,7 +104,7 @@
 
           <div class="col-md-3 col-xs-3 text-center">
             <span class="company logo">
-              <img alt src="css/content/vol_logo.png" style="width:60px;height:60px">
+              <img alt src="assets/images/buzzfeed_logo.png" style="width:90px;height:60px">
             </span>
           </div>
 
@@ -110,30 +112,37 @@
             <span class="company name">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">
-                  Volkswagen
+                  Hilarious Comic Strip Writers
                 </a>
               </h4>
-
             </span>
           </div>
 
           <div class="col-md-3 col-xs-3 text-center">
             <span class="job skills">
-              <h4>learning learning learning</h4>
+              <h6>
+                <span class="label label-primary">Great Writing Skills</span>
+                <br/>
+                <span class="label label-success">Sense of Humor</span>
+                <br/>
+                <span class="label label-info">WordPress</span>
+              </h6>
             </span>
           </div>
 
           <div class="col-md-3 col-xs-3 text-center">
             <span class="rating">
-              <h4 text>95%</h4>
+              <h4 text>
+                <span class="badge">91%</span>
+              </h4>
             </span>
           </div>
         </div>
       </div>
       <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
         <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          <a>apply</a>
+          We're looking for between 10-20 jokes which will be whittled down to 6. These will accompany cartoons. $60 compensation.
+          <span="label label-success"><%= link_to "Apply", class: "btn btn-success" %></span>
         </div>
       </div>
     </div>
@@ -144,7 +153,7 @@
 
           <div class="col-md-3 col-xs-3 text-center">
             <span class="company logo">
-              <img alt src="css/content/vol_logo.png" style="width:60px;height:60px">
+              <img alt src="assets/images/huffpo-logo.png" style="width:60px;height:60px">
             </span>
           </div>
 
@@ -152,47 +161,39 @@
             <span class="company name">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed">
-                  Volkswagen
+                  Awesome Freelance Journalist (long-term)
                 </a>
               </h4>
-
             </span>
           </div>
 
           <div class="col-md-3 col-xs-3 text-center">
             <span class="job skills">
-              <h4>learning learning learning</h4>
+              <h6>
+                <span class="label label-primary">Industry Expertise</span>
+                <br/>
+                <span class="label label-success">Content Marketing</span>
+                <br/>
+                <span class="label label-info">Twitter</span>
+              </h6>
             </span>
           </div>
 
           <div class="col-md-3 col-xs-3 text-center">
             <span class="rating">
-              <h4 text>95%</h4>
+              <h4 text>
+                <span class="badge">89%</span>
+              </h4>
             </span>
           </div>
         </div>
       </div>
       <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
         <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          <a>apply</a>
+          Compensation 2k-5k DOE and quality of work and turnaround time.
+          <span="label label-success"><%= link_to "Apply", class: "btn btn-success" %></span>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-<br/><br/><br/><br/><br/>
-
-<div class="container">
-
-  <hr>
-
-  <div class="row">
-    <div class="col-lg-12">
-      <br><br>
-      <p class="pull-right">© Freelanship</p>
-      <br/><br/>
     </div>
   </div>
 </div>
