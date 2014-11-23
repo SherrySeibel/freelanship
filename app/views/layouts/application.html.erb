@@ -19,23 +19,44 @@
         <!-- bootstrap- java script tools -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
       </head>
-      <body>
-        <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
-          <div class="container-fluid">
+      <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+          <div class="container">
             <div class="navbar-header">
-              <%= image_tag "logo_rsz.png", class: "navbar-brand" %>
-              <% link_to root_path, class: "navbar-brand" %>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i>  <span class="light"> <a href="#page-top"> <%= link_to "Start searching!", new_session_path %></a></span>
+              </a>
             </div>
 
-            <ul class="nav navbar-nav navbar-right">
-              <% if signed_in? %>
-                <li><%= link_to "Sign out", session_path, method: :delete %></li>
-              <% else %>
-                <li><%= link_to "Sign Up", new_user_path %></li>
-                <li><%= link_to "Sign In", new_session_path %></li>
-              <% end %>
-            </ul>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+              <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <% if signed_in? %>
+                  <li><%= link_to "Sign out", session_path, method: :delete %></li>
+                <% else %>
+                  <li class="hidden">
+                    <a href="#page-top"></a>
+                  </li>
+                  <li>
+                    <a class="page-scroll" href="#about">About</a>
+                  </li>
+                  <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                  </li>
+                  <li><%= link_to "Sign Up", new_user_path %></li>
+                  <li><%= link_to "Sign In", new_session_path %></li>
+                <% end %>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
           </div>
+          <!-- /.container -->
         </nav>
 
       <% if alert %>
