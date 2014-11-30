@@ -36,4 +36,4 @@ Currently, the only thing persisting to the databse is users. While some tables 
 
 #Credit
 
-This project was completed by developers [Sherry Seibel](https://github.com/SherrySeibel), [Jeremy Bensabat](jeremybensabat@gmail.com), and [Michael Wan](mcwan@post.harvard.edu)
+This project was completed by developers [Sherry Seibel](https://github.com/SherrySeibel), [Jeremy Bensabat](https://github.com/jeremybensabat), and [Michael Wan](https://github.com/squarepantz)
