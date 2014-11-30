@@ -16,7 +16,7 @@ Several pages were included in the demo, including the landing page, sign in pag
 #The landing page
 
 ![Landing Page](http://i36.photobucket.com/albums/e17/cordiallysherry/ScreenShot2014-11-30at112738AM_zps268c20f1.png)
-![About Section](http://i36.photobucket.com/albums/e17/cordiallysherry/ScreenShot2014-11-30at14426PM_zps07e87eee.png)
+![About Section](http://i36.photobucket.com/albums/e17/cordiallysherry/ScreenShot2014-11-30at30044PM_zps455145ea.png)
 ![Contact Information](http://i36.photobucket.com/albums/e17/cordiallysherry/ScreenShot2014-11-30at14437PM_zpsd5d9df7f.png)
 
 #The sign in page
