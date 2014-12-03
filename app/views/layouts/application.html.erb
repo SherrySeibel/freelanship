@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Freelanship</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-    <html lang="en">
-      <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <meta name="generator" content="Bootply" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <!-- load jquery / BEFORE java script 8-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <!-- bootstrap- java script tools -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-      </head>
-      <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<head>
+		<title>Freelanship</title>
+		<!-- all metas -->
+		<%= csrf_meta_tags %>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"></i>
-              </button>
-              <a class="navbar-brand page-scroll" href="#page-top">
-                <i class="fa fa-play-circle"></i>  <span class="light"> <a href="#page-top"> <%= link_to "Start searching!", new_session_path %></a></span>
-              </a>
-            </div>
+		<!-- all stylesheets -->
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-              <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <% if signed_in? %>
-                  <li><%= link_to "Sign out", session_path, method: :delete %></li>
-                <% else %>
-                  <li class="hidden">
-                    <a href="#page-top"></a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#about">About</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                  </li>
-                  <li><%= link_to "Sign Up", new_user_path %></li>
-                  <li><%= link_to "Sign In", new_session_path %></li>
-                <% end %>
-              </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-          </div>
-          <!-- /.container -->
-        </nav>
+		<!-- all javascripts -->
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
-      <% if alert %>
-        <p><%= alert %></p>
-      <% end %>
+		<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <%= yield %>
+			<!-- Navigation -->
+			<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand page-scroll" href="#page-top">
+						<i class="fa fa-play-circle"></i>  <span class="light"> <a href="#page-top"> <%= link_to "Start searching!", new_session_path %></a></span>
+					</a>
+				</div>
 
-  </body>
-</html>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+					<ul class="nav navbar-nav">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<% if signed_in? %>
+							<li><%= link_to "Sign out", session_path, method: :delete %></li>
+						<% else %>
+							<li class="hidden">
+							<a href="#page-top"></a>
+							</li>
+							<li>
+							<a class="page-scroll" href="#about">About</a>
+							</li>
+							<li>
+							<a class="page-scroll" href="#contact">Contact</a>
+							</li>
+							<li><%= link_to "Sign Up", new_user_path %></li>
+							<li><%= link_to "Sign In", new_session_path %></li>
+						<% end %>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+			</nav>
+
+			<% if alert %>
+				<p><%= alert %></p>
+			<% end %>
+
+			<%= yield %>
+
+		</body>
+	</html>
